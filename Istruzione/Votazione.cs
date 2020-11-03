@@ -6,9 +6,22 @@ using System.Threading.Tasks;
 
 namespace Istruzione
 {
-    class Votazione
+    public class Votazione
     {
-        private double voto;
-        private DateTime data;
+        public double voto;
+        public DateTime data;
+        private Studente studente;
+        public Materia Materia { get; private set; }
+        public Votazione(double voto, Studente s ,Materia m)
+        {
+            this.voto = voto;
+            studente = s;
+            Materia = m;
+            data = DateTime.Now;
+        }
+        public bool IsSufficiente()
+        {
+            return voto >= 6;
+        }
     }
 }

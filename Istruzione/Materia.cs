@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Istruzione
 {
-    class Materia
+    public class Materia
     {
-        private string nome;
-        public Materia()
+        public string nome { get; private set; }
+        public Materia(string nome)
         {
             this.nome = nome;
         }
