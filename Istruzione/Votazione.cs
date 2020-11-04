@@ -17,6 +17,7 @@ namespace Istruzione
             this.voto = voto;
             studente = s;
             Materia = m;
+            s.AddVoto(this);            
             data = DateTime.Now;
         }
         public bool IsSufficiente()

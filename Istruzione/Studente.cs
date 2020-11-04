@@ -46,5 +46,19 @@ namespace Istruzione
             }
             return min;
         }
+        public Votazione TrovaVotoRecente()
+        {
+            DateTime dataRecente = new DateTime(2020, 9, 11);
+            int index = 0;
+            for(int i = 0; i < Votazioni.Count; i++)
+            {
+                if(Votazioni[i].data > dataRecente)
+                {
+                    dataRecente = Votazioni[i].data;
+                    index = i;
+                }
+            }
+            return index[];
+        }
     }
 }
